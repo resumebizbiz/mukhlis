@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhammad Mukhlis — Portfolio</title>
+  <!-- ============================================================ -->
+  <!-- BEFORE GOING LIVE, this site still needs (see DEPLOY-NOTES.md): -->
+  <!--   1. profile.jpg  — Mukhlis's profile photo, saved in this folder -->
+  <!--   2. mukhliskamarul.goatcounter.com created in GoatCounter        -->
+  <!--   3. Final resume.pdf (current one still has draft notes in red)  -->
+  <!--   4. Project images (optional): fyp.png, aura.png, ecowise.png,   -->
+  <!--      ecotopsis.png, edudecision.png, iidex.png                    -->
+  <!-- ============================================================ -->
+  <!-- OPEN GRAPH / SOCIAL SHARE PREVIEW -->
+  <!-- Controls how this link looks when shared on WhatsApp, LinkedIn, etc. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Muhammad Mukhlis — Portfolio" />
+  <meta property="og:description" content="Check out my portfolio — Resume, Projects, Publications, and more." />
+  <meta property="og:image" content="https://mukhliskamarul.github.io/portfolio/profile.jpg" />
+  <meta property="og:url" content="https://mukhliskamarul.github.io/portfolio/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Muhammad Mukhlis — Portfolio" />
+  <meta name="twitter:description" content="Check out my portfolio — Resume, Projects, Publications, and more." />
+  <meta name="twitter:image" content="https://mukhliskamarul.github.io/portfolio/profile.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- ANALYTICS (GoatCounter) — RM35 visitor tracker -->
+  <!-- Set to Mukhlis's own subdomain. NOTE: the site "mukhliskamarul" must be -->
+  <!-- created in GoatCounter (Settings → enable Public dashboard) BEFORE deploy, -->
+  <!-- otherwise visits won't be counted. -->
+  <script data-goatcounter="https://mukhliskamarul.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <!-- SECTION POSITION RAIL -->
+  <!-- One segment per tab; lights up gold for the current and prior tabs,
+       giving a "step X of N" sense of position without needing scroll. -->
+  <div class="progress-rail" id="progressRail">
+    <div class="rail-segment" data-index="0"></div>
+    <div class="rail-segment" data-index="1"></div>
+    <div class="rail-segment" data-index="2"></div>
+    <div class="rail-segment" data-index="3"></div>
+    <div class="rail-segment" data-index="4"></div>
+    <div class="rail-segment" data-index="5"></div>
+    <div class="rail-segment" data-index="6"></div>
+    <div class="rail-segment" data-index="7"></div>
+    <div class="rail-segment" data-index="8"></div>
+    <div class="rail-segment" data-index="9"></div>
+  </div>
+  <!-- THEME TOGGLE -->
+  <button class="theme-toggle" id="themeBtn" title="Toggle dark/light mode">
+    <span class="icon-sun">☀</span>
+    <span class="icon-moon">☾</span>
+  </button>
+  <!-- SIDEBAR NAV -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <div class="profile-ring-small">
+        <img src="profile.jpg" alt="Muhammad Mukhlis Bin Kamarul Zaman" class="profile-pic-small" />
+      </div>
+      <p class="sidebar-name">MUHAMMAD MUKHLIS</p>
+      <p class="sidebar-role">Research &amp; Data Analyst</p>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#hero" class="nav-link active" data-section="hero"><span class="nav-dot"></span>Intro</a>
+      <a href="#objective" class="nav-link" data-section="objective"><span class="nav-dot"></span>Objective</a>
+      <a href="#education" class="nav-link" data-section="education"><span class="nav-dot"></span>Education</a>
+      <a href="#skills" class="nav-link" data-section="skills"><span class="nav-dot"></span>Skills</a>
+      <a href="#projects" class="nav-link" data-section="projects"><span class="nav-dot"></span>Projects</a>
+      <a href="#certifications" class="nav-link" data-section="certifications"><span class="nav-dot"></span>Certifications</a>
+      <a href="#experience" class="nav-link" data-section="experience"><span class="nav-dot"></span>Experience</a>
+      <a href="#achievements" class="nav-link" data-section="achievements"><span class="nav-dot"></span>Achievements</a>
+      <a href="#leadership" class="nav-link" data-section="leadership"><span class="nav-dot"></span>Leadership</a>
+      <a href="#references" class="nav-link" data-section="references"><span class="nav-dot"></span>References</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <a href="#resume-view" class="sidebar-cta" id="viewResumeBtn" data-section="resume-view">View Resume</a>
+    </div>
+  </aside>
+  <!-- MOBILE NAV TOGGLE -->
+  <button class="mobile-nav-toggle" id="mobileNavToggle">☰</button>
+  <!-- MOBILE SIDEBAR BACKDROP -->
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+  <main class="main-content">
+    <!-- HERO -->
+    <section class="hero panel is-active" id="hero">
+      <!-- Faint background photo — always the client's OWN profile picture -->
+      <div class="hero-bg-photo" aria-hidden="true"><img src="profile.jpg" alt="" /></div>
+      <div class="hero-inner reveal">
+        <p class="hero-eyebrow">Portfolio · Telok Mas, Melaka</p>
+        <h1 class="hero-title">Hi, I'm <span class="accent">Muhammad Mukhlis</span>.</h1>
+        <p class="hero-sub">MSc (Mathematics) candidate turning data into evidence-based decisions — with award-winning decision-support tools built in Python, R, and Power BI.</p>
+        <div class="hero-contact">
+          <a href="mailto:mmkz1999@gmail.com">mmkz1999@gmail.com</a>
+          <span class="dot-sep">•</span>
+          <a href="https://www.linkedin.com/in/muhammad-mukhlis-bin-kamarul-zaman-7663202a8/" target="_blank">LinkedIn</a>
+          <span class="dot-sep">•</span>
+          <a href="https://github.com/mukhliskamarul" target="_blank">GitHub</a>
+          <span class="dot-sep">•</span>
+          <a href="tel:+60122576460">(+60)12-2576460</a>
+        </div>
+      </div>
+    </section>
+    <!-- RESUME VIEW (opened via "View Resume" button, not auto-download) -->
+    <section class="block panel" id="resume-view">
+      <div class="block-inner reveal">
+        <p class="block-eyebrow">Resume</p>
+        <h2 class="block-title">My resume</h2>
+        <!-- To update the resume later: just replace the resume.pdf file in this -->
+        <!-- folder with the new version (keep the same filename, "resume.pdf"). -->
+        <div class="resume-frame-wrap">
+          <iframe src="resume.pdf" class="resume-frame" title="Resume preview"></iframe>
+        </div>
+        <a href="resume.pdf" class="link-arrow" download>↓ Download this resume</a>
+      </div>
+    </section>
+    <!-- OBJECTIVE -->
+    <section class="block panel" id="objective">
+      <div class="block-inner reveal">
+        <p class="block-eyebrow">01 — Objective</p>
+        <h2 class="block-title">What I'm working toward</h2>
+        <p class="objective-text">A motivated and adaptable Management Mathematics graduate, currently pursuing a Master of Science (Mathematics), with a strong foundation in quantitative analysis built through academic research and data-driven project work. Brings strong analytical and problem-solving skills, works effectively both independently and within teams, and has developed solid communication abilities through facilitation and research engagements. Seeking an entry-level Research Analyst or Data Analyst role to apply statistical modelling and rigorous research skills toward generating evidence-based insights that support better decisions.</p>
+      </div>
+    </section>
+    <!-- EDUCATION -->
+    <section class="block panel" id="education">
+      <div class="block-inner reveal">
+        <p class="block-eyebrow">02 — Education</p>
+        <h2 class="block-title">Education</h2>
+        <div class="edu-card hover-lift">
+          <p class="edu-date">Sep 2024 – Present</p>
+          <h3>Master of Science (Mathematics)</h3>
+          <p class="edu-school">Universiti Teknologi MARA (UiTM), Seremban, Negeri Sembilan</p>
+          <p class="edu-meta"><strong>Research Focus:</strong> Multi-Criteria Decision-Making (MCDM) &amp; Fuzzy Set Theory</p>
+        </div>
+        <div class="edu-card hover-lift">
+          <p class="edu-date">Mar 2022 – Aug 2024</p>
+          <h3>Bachelor of Science (Hons.) Management Mathematics</h3>
+          <p class="edu-school">Universiti Teknologi MARA (UiTM), Seremban, Negeri Sembilan</p>
+          <p class="edu-meta"><strong>CGPA: 3.64</strong> · Dean's List Award (3 semesters)</p>
+        </div>
+        <div class="edu-card hover-lift">
+          <p class="edu-date">Jul 2019 – Feb 2022</p>
+          <h3>Diploma in Mathematical Sciences</h3>
+          <p class="edu-school">Universiti Teknologi MARA (UiTM), Tapah, Perak</p>
+          <p class="edu-meta"><strong>CGPA: 3.93</strong> · Vice Chancellor's Award · MUET Band 4</p>
+        </div>
+      </div>
+    </section>
+    <!-- SKILLS -->
+    <section class="block panel" id="skills">
+      <div class="block-inner reveal">
+        <p class="block-eyebrow">03 — Skills</p>
+        <h2 class="block-title">What I bring to the table</h2>
+        <div class="skill-row">
+          <span class="skill-row-label">Data &amp; Programming</span>
+          <div class="skill-pills">
+            <span class="skill-pill hover-lift"><img src="python.png" alt="" class="skill-pill-icon" />Python (pandas, Streamlit)</span>
+            <span class="skill-pill hover-lift"><img src="R.png" alt="" class="skill-pill-icon" />R (RStudio)</span>
+            <span class="skill-pill hover-lift"><img src="Sql.png" alt="" class="skill-pill-icon" />SQL (MySQL)</span>
+            <span class="skill-pill hover-lift"><img src="Matlab.png" alt="" class="skill-pill-icon" />MATLAB</span>
+            <span class="skill-pill hover-lift"><img src="maple.png" alt="" class="skill-pill-icon" />MAPLE</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row-label">Visualisation &amp; BI</span>
+          <div class="skill-pills">
+            <span class="skill-pill hover-lift"><img src="Powerbipng.png" alt="" class="skill-pill-icon" />Microsoft Power BI</span>
+            <span class="skill-pill hover-lift"><img src="looker.png" alt="" class="skill-pill-icon" />Looker</span>
+            <span class="skill-pill hover-lift"><img src="Excel.png" alt="" class="skill-pill-icon" />Microsoft Excel (Solver)</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row-label">Documentation &amp; Tools</span>
+          <div class="skill-pills">
+            <span class="skill-pill hover-lift"><img src="overleaf.png" alt="" class="skill-pill-icon" />LaTeX</span>
+            <span class="skill-pill hover-lift"><img src="github.png" alt="" class="skill-pill-icon" />GitHub</span>
+            <span class="skill-pill hover-lift"><img src="PowerPoint.png" alt="" class="skill-pill-icon" />Microsoft PowerPoint</span>
+            <span class="skill-pill hover-lift"><img src="canva.png" alt="" class="skill-pill-icon" />Canva</span>
+          </div>
+        </div>
+        <div class="skill-row skill-row-last">
+          <span class="skill-row-label">Languages</span>
+          <div class="skill-pills">
+            <span class="skill-pill skill-pill-gold hover-lift">Malay (Native)</span>
+            <span class="skill-pill skill-pill-gold hover-lift">English (Proficient)</span>
+          </div>
+        </div>
+        <!-- Skill icons: each pill's <img src="..."> must point to a PNG that sits in the -->
+        <!-- SAME folder as this index.html, with the filename matching EXACTLY, including -->
+        <!-- capital letters (GitHub Pages is case-sensitive: R.png is not r.png). -->
+        <!-- To remove an icon, change src="..." back to data-src="" — it hides cleanly. -->
+        <!-- Language pills intentionally have no icon slot. -->
+      </div>
+    </section>
+    <!-- PROJECTS -->
+    <section class="block panel" id="projects">
+      <div class="block-inner reveal">
+        <p class="block-eyebrow">04 — Projects</p>
+        <h2 class="block-title">Things I've built</h2>
+        <p class="block-intro">Decision-support software and quantitative models — most built with Python and Streamlit around Multi-Criteria Decision-Making (MCDM), and several recognised with medals on the national and international invention &amp; innovation circuit in 2025.</p>
+        <!-- Card images: drop fyp.png, aura.png, ecowise.png, ecotopsis.png, -->
+        <!-- edudecision.png and iidex.png (screenshots of each app work great) into -->
+        <!-- this folder and they'll appear automatically. Until then, cards show a -->
+        <!-- clean coloured placeholder — nothing looks broken without them. -->
+        <div class="bento-grid">
+          <button class="bento-card hover-lift" data-project="proj-1" type="button">
+            <img src="fyp.png" alt="" class="bento-card-img" />
+            <span class="bento-type-label">Final Year Project</span>
+            <div class="bento-card-overlay"></div>
+            <span class="bento-card-content">
+              <span class="bento-card-title">Portfolio Optimisation of Malaysian Top 30 &amp; Mid 70 Assets</span>
+              <span class="bento-tags">
+                <span class="bento-tag">Excel Solver</span>
+                <span class="bento-tag">Mean-MAD</span>
+                <span class="bento-tag">Backtesting</span>
+              </span>
+            </span>
+          </button>
+          <button class="bento-card hover-lift" data-project="proj-2" type="button">
+            <img src="aura.png" alt="" class="bento-card-img" />
+            <span class="bento-type-label">Silver · i-SPIKE 2025</span>
+            <div class="bento-card-overlay"></div>
+            <span class="bento-card-content">
+              <span class="bento-card-title">AURA: Decision Support Software for Sustainable MCDM</span>
+              <span class="bento-tags">
+                <span class="bento-tag">Python</span>
+                <span class="bento-tag">Streamlit</span>
+                <span class="bento-tag">MCDM</span>
+              </span>
+            </span>
+          </button>
+          <button class="bento-card hover-lift" data-project="proj-3" type="button">
+            <img src="ecowise.png" alt="" class="bento-card-img" />
+            <span class="bento-type-label">Silver · I-URIID 2025</span>
+            <div class="bento-card-overlay"></div>
+            <span class="bento-card-content">
+              <span class="bento-card-title">EcoWise: Intelligent Sustainability Evaluation (WISE-T)</span>
+              <span class="bento-tags">
+                <span class="bento-tag">TOPSIS</span>
+                <span class="bento-tag">Web App</span>
+              </span>
+            </span>
+          </button>
+          <button class="bento-card hover-lift" data-project="proj-4" type="button">
+            <img src="ecotopsis.png" alt="" class="bento-card-img" />
+            <span class="bento-type-label">Silver · NSEIx 2025</span>
+            <div class="bento-card-overlay"></div>
+            <span class="bento-card-content">
+              <span class="bento-card-title">EcoTOPSIS: Big Data Sustainable Evaluation &amp; Ranking</span>
+              <span class="bento-tags">
+                <span class="bento-tag">Big Data</span>
+                <span class="bento-tag">TOPSIS</span>
+              </span>
+            </span>
+          </button>
+          <button class="bento-card hover-lift" data-project="proj-5" type="button">
+            <img src="edudecision.png" alt="" class="bento-card-img" />
+            <span class="bento-type-label">Bronze · PIID 2025</span>
+            <div class="bento-card-overlay"></div>
+            <span class="bento-card-content">
+              <span class="bento-card-title">EduDecision: Education Decision-Making Web App</span>
+              <span class="bento-tags">
+                <span class="bento-tag">Python</span>
+                <span class="bento-tag">Streamlit</span>
+                <span class="bento-tag">WASPAS</span>
+              </span>
+            </span>
+          </button>
+          <button class="bento-card hover-lift" data-project="proj-6" type="button">
+            <img src="iidex.png" alt="" class="bento-card-img" />
+            <span class="bento-type-label">2× Bronze · IIDEX 2025</span>
+            <div class="bento-card-overlay"></div>
+            <span class="bento-card-content">
+              <span class="bento-card-title">INNORANK-ARIE &amp; SYAI: Intelligent MCDM Frameworks</span>
+              <span class="bento-tags">
+                <span class="bento-tag">MCDM</span>
+                <span class="bento-tag">Ranking Systems</span>
+              </span>
+            </span>
+          </button>
+        </div>
+        <!-- Need more projects? Duplicate one <button class="bento-card ...">...</button> block above, -->
+        <!-- give it a new unique data-project value (e.g. proj-7), and add a matching -->
+        <!-- .project-detail-card block below with id="proj-7". -->
+        <!-- PROJECT DETAIL POPUPS — opened/closed via JS (script.js), not the URL hash, -->
+        <!-- so they don't collide with this site's tab-navigation routing. -->
+        <!-- One shared overlay; JS shows whichever .project-detail-card matches the clicked bento card. -->
+        <div class="project-overlay" id="projectOverlay">
+          <button class="detail-close" id="projectOverlayClose" aria-label="Close" type="button">✕</button>
+          <div class="project-detail-card" id="proj-1" data-project-detail>
+            <h3>Final Year Project — Portfolio Optimisation of Malaysian Top 30 &amp; Mid 70 Assets</h3>
+            <div class="tag-row">
+              <span class="tag-pill-sm">Excel Solver</span>
+              <span class="tag-pill-sm">Mean-MAD</span>
+              <span class="tag-pill-sm">Backtesting</span>
+            </div>
+            <p>Constructed a Mean-MAD portfolio optimisation model using Excel Solver, applied to financial data on 100 Malaysian assets collected from DataStream and Yahoo Finance, then backtested on out-of-sample data to validate portfolio performance and robustness.</p>
+            <!-- To link to the live project/GitHub repo, uncomment and set the URL: -->
+            <!-- <a href="PASTE-PROJECT-LINK-HERE" class="link-arrow" target="_blank">View project →</a> -->
+          </div>
+          <div class="project-detail-card" id="proj-2" data-project-detail>
+            <h3>AURA: Streamlit-Based Decision Support Software for Sustainable MCDM</h3>
+            <div class="tag-row">
+              <span class="tag-pill-sm">Python</span>
+              <span class="tag-pill-sm">Streamlit</span>
+              <span class="tag-pill-sm">MCDM</span>
+            </div>
+            <p>Developed a Python/Streamlit decision-support application for sustainable multi-criteria decision-making, awarded Silver (Science &amp; Technology, Young Inventor category) at the 3rd International Exhibition &amp; Symposium on Productivity, Innovation, Knowledge &amp; Education (i-SPIKE 2025). AURA is also the subject of a 2025 publication in <em>SoftwareX</em>.</p>
+            <!-- <a href="PASTE-PROJECT-LINK-HERE" class="link-arrow" target="_blank">View project →</a> -->
+          </div>
+          <div class="project-detail-card" id="proj-3" data-project-detail>
+            <h3>EcoWise: Web-Based Intelligent Sustainability Evaluation Using TOPSIS (WISE-T)</h3>
+            <div class="tag-row">
+              <span class="tag-pill-sm">TOPSIS</span>
+              <span class="tag-pill-sm">Web App</span>
+            </div>
+            <p>Built a web-based intelligent sustainability evaluation tool implementing the TOPSIS method, awarded Silver at the International Undergraduate Research Innovation, Invention and Design competition (I-URIID 2025).</p>
+            <!-- <a href="PASTE-PROJECT-LINK-HERE" class="link-arrow" target="_blank">View project →</a> -->
+          </div>
+          <div class="project-detail-card" id="proj-4" data-project-detail>
+            <h3>EcoTOPSIS: A Big Data Approach for Sustainable Evaluation and Ranking</h3>
+            <div class="tag-row">
+              <span class="tag-pill-sm">Big Data</span>
+              <span class="tag-pill-sm">TOPSIS</span>
+            </div>
+            <p>Designed a big-data evaluation and ranking framework for sustainability assessment, awarded Silver at the Negeri Sembilan International Exposition (NSEIx) &amp; Research Symposium 2025.</p>
+            <!-- <a href="PASTE-PROJECT-LINK-HERE" class="link-arrow" target="_blank">View project →</a> -->
+          </div>
+          <div class="project-detail-card" id="proj-5" data-project-detail>
+            <h3>EduDecision: A Python-Streamlit Web Application for Big Data-Driven Education Decision-Making</h3>
+            <div class="tag-row">
+              <span class="tag-pill-sm">Python</span>
+              <span class="tag-pill-sm">Streamlit</span>
+              <span class="tag-pill-sm">WASPAS</span>
+            </div>
+            <p>Created a big data-driven education decision-making web application using the WASPAS method, awarded Bronze at the Penang International Invention, Innovation and Design competition (PIID 2025).</p>
+            <!-- <a href="PASTE-PROJECT-LINK-HERE" class="link-arrow" target="_blank">View project →</a> -->
+          </div>
+          <div class="project-detail-card" id="proj-6" data-project-detail>
+            <h3>INNORANK-ARIE &amp; SYAI: Intelligent Multi-Criteria Decision-Making Frameworks</h3>
+            <div class="tag-row">
+              <span class="tag-pill-sm">MCDM</span>
+              <span class="tag-pill-sm">Ranking Systems</span>
+            </div>
+            <p>Engineered an intelligent ranking system (INNORANK-ARIE) and a unified multi-criteria decision-making framework (SYAI), each awarded Bronze at the Invention, Innovation &amp; Design Exposition (IIDEX 2025).</p>
+            <!-- <a href="PASTE-PROJECT-LINK-HERE" class="link-arrow" target="_blank">View project →</a> -->
+          </div>
+        </div>
+        <!-- Need more projects? Add a matching <div class="project-detail-card" id="proj-N" data-project-detail>...</div> -->
+        <!-- block above, with id matching the new bento card's data-project value. -->
+        <!-- [RM35 ONLY] Optional video embed slot (.video-embed component, defined in style.css). -->
+        <!-- If a project demo video is uploaded to YouTube later, paste this block into whichever -->
+        <!-- tab makes sense and replace VIDEO_ID: -->
+        <!-- <div class="video-embed"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div> -->
+      </div>
+    </section>
+    <!-- CERTIFICATIONS -->
+    <!-- No certifications were provided yet, so the two cards below are placeholders. -->
+    <!-- TO FILL THIS IN LATER: for each cert, (1) save the certificate image into this -->
+    <!-- folder (e.g. cert1.png), (2) update the data-img AND the <img src> to that -->
+    <!-- filename, (3) replace the [Certification/Course Name] and [Issuing Institution] -->
+    <!-- text. Need more cards? Duplicate a whole <button class="cert-chip ...">...</button> block. -->
+    <section class="block panel" id="certifications">
+      <div class="block-inner reveal">
+        <p class="block-eyebrow">05 — Certifications</p>
+        <h2 class="block-title">Certifications &amp; professional development</h2>
+        <div class="cert-strip">
+          <button class="cert-chip hover-lift img-trigger" data-img="cert1.png" type="button">
+            <img src="cert1.png" alt="[Certification/Course Name]" />
+            <span class="cert-chip-name">[Certification/Course Name]</span>
+            <span class="cert-chip-issuer">[Issuing Institution]</span>
+          </button>
+          <button class="cert-chip hover-lift img-trigger" data-img="cert2.png" type="button">
+            <img src="cert2.png" alt="[Certification/Course Name]" />
+            <span class="cert-chip-name">[Certification/Course Name]</span>
+            <span class="cert-chip-issuer">[Issuing Institution]</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- WORK EXPERIENCE -->
+    <section class="block panel" id="experience">
+      <div class="block-inner reveal">
+        <p class="block-eyebrow">06 — Experience</p>
+        <h2 class="block-title">Where I've worked</h2>
+        <div class="timeline-track">
+          <div class="timeline-entry">
+            <div class="timeline-marker">
+              <span class="timeline-dot"></span>
+              <span class="timeline-line"></span>
+            </div>
+            <div class="timeline-content">
+              <p class="timeline-date">Nov 2025 – Mar 2026</p>
+              <h3>Research Assistant</h3>
+              <p class="timeline-meta">Universiti Teknologi MARA (UiTM)</p>
+              <ul>
+                <li>Drafted and co-wrote research and project reports, managing project documentation and administrative records across the full research cycle.</li>
+                <li>Prepared Letters of Offer (LO), reimbursement claims and supporting documents, coordinating approvals and signatures with the Finance/Bursary Office.</li>
+                <li>Delivered complete and accurate document submissions within every deadline by tracking approval status end-to-end.</li>
+              </ul>
+              <!-- TO ADD PHOTOS for this role later: save the photos into this folder, then -->
+              <!-- paste this block right here (one <button> per photo, update both filenames): -->
+              <!-- <div class="photo-strip">
+                <button class="img-trigger" data-img="ra-photo1.jpg" type="button"><img src="ra-photo1.jpg" alt="Photo 1"></button>
+              </div> -->
+            </div>
+          </div>
+          <div class="timeline-entry">
+            <div class="timeline-marker">
+              <span class="timeline-dot"></span>
+              <span class="timeline-line"></span>
+            </div>
+            <div class="timeline-content">
+              <p class="timeline-date">Mar 2024 – Jul 2024</p>
+              <h3>Logistics Assistant (Internship)</h3>
+              <p class="timeline-meta">Exaira Sdn Bhd</p>
+              <ul>
+                <li>Analysed logistics and inventory data through daily data entry, supporting order processing and inventory management operations.</li>
+                <li>Coordinated with suppliers and vendors to secure on-time delivery of goods, liaising between departments to resolve operational issues.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-entry">
+            <div class="timeline-marker">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <p class="timeline-date">Mar 2021 – Oct 2021</p>
+              <h3>Esports Event Organizer (Freelance)</h3>
+              <p class="timeline-meta">Online</p>
+              <ul>
+                <li>Managed participant data and produced daily reports in Microsoft Excel across competitive esports events.</li>
+                <li>Administered tournament operations by managing brackets in Challonge and coordinating live streaming.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Need more roles? Duplicate one <div class="timeline-entry">...</div> block above and update the content. -->
+        <!-- Every entry except the LAST one needs a <span class="timeline-line"></span> inside .timeline-marker, -->
+        <!-- so the connecting line continues all the way down except after the final entry. -->
+      </div>
+    </section>
+    <!-- ACHIEVEMENTS -->
+    <section class="block panel" id="achievements">
+      <div class="block-inner reveal">
+        <p class="block-eyebrow">07 — Achievements</p>
+        <h2 class="block-title">Recognition along the way</h2>
+        <div class="trophy-shelf">
+          <div class="trophy-row">
+            <span class="trophy-icon">📄</span>
+            <div class="trophy-text">
+              <h3>Publication — "AURA: An Adaptive Utility Ranking Algorithm for Multi-Criteria Decision Making with Python-Based Decision Support Interface", <em>SoftwareX</em></h3>
+              <p class="trophy-date">2025</p>
+            </div>
+          </div>
+          <div class="trophy-row">
+            <span class="trophy-icon">📄</span>
+            <div class="trophy-text">
+              <h3>Publication — "From Fuzzy Insights to Strategic Impact: Integrating AURA with q-Rung Orthopair Fuzzy Sets in Multi-Criteria Decision-Making", <em>IEEE</em></h3>
+              <p class="trophy-date">2025</p>
+            </div>
+          </div>
+          <div class="trophy-row">
+            <span class="trophy-icon">🥈</span>
+            <div class="trophy-text">
+              <h3>Invention, Innovation &amp; Design (IID) Awards — 3 Silver &amp; 3 Bronze medals across i-SPIKE, I-URIID, NSEIx, PIID &amp; IIDEX</h3>
+              <p class="trophy-date">2025</p>
+            </div>
+          </div>
+          <div class="trophy-row">
+            <span class="trophy-icon">🎤</span>
+            <div class="trophy-text">
+              <h3>Consolation Place (Master's Category) — 3-Minute Research Idea Competition, UiTM Seremban</h3>
+              <p class="trophy-date">Sep 2025</p>
+            </div>
+          </div>
+          <div class="trophy-row">
+            <span class="trophy-icon">🎓</span>
+            <div class="trophy-text">
+              <h3>Dean's List Award — UiTM Seremban (Bachelor's Degree, Semesters 3, 4 &amp; 6)</h3>
+              <p class="trophy-date">2022 – 2024</p>
+            </div>
+          </div>
+          <div class="trophy-row">
+            <span class="trophy-icon">🏆</span>
+            <div class="trophy-text">
+              <h3>Vice Chancellor's Award — UiTM Tapah (Diploma)</h3>
+              <p class="trophy-date">Feb 2022</p>
+            </div>
+          </div>
+          <!-- One more award from the resume was intentionally left OFF this public page: -->
+          <!-- "Finalist, Anugerah Khas Mahasiswa OKU Harapan, UiTM (2023)". -->
+          <!-- If you'd like it shown, duplicate a .trophy-row block above and add it. -->
+        </div>
+        <!-- TO ADD PHOTOS to any achievement: (1) add a camera button inside its .trophy-row, -->
+        <!-- just before the closing </div> of the row:
+             <button class="trophy-expand" data-target="ach-photos-1" aria-label="Show photos">📷</button>
+             (2) then add a photo strip right AFTER that row (id must match data-target):
+             <div class="photo-strip" id="ach-photos-1">
+               <button class="img-trigger" data-img="award1.jpg" type="button"><img src="award1.jpg" alt="Photo 1"></button>
+             </div>
+             The photos stay hidden until the camera icon is clicked. -->
+      </div>
+    </section>
+    <!-- LEADERSHIP -->
+    <section class="block panel" id="leadership">
+      <div class="block-inner reveal">
+        <p class="block-eyebrow">08 — Leadership</p>
+        <h2 class="block-title">Leadership &amp; co-curricular activities</h2>
+        <div class="leadership-list">
+          <div class="leadership-card hover-lift">
+            <p class="leadership-date">Jan 2026</p>
+            <h3>Facilitator — LaTeX Online Workshop for Students from Indonesia</h3>
+            <p>Facilitated an international online LaTeX workshop, guiding students from Indonesia through scientific document preparation.</p>
+          </div>
+          <div class="leadership-card hover-lift">
+            <p class="leadership-date">Nov 2025</p>
+            <h3>Secretary &amp; Facilitator — Bengkel LaTeX 101, UiTM Seremban</h3>
+            <p>Co-organised and facilitated a LaTeX fundamentals workshop, handling secretariat duties and hands-on participant guidance.</p>
+          </div>
+          <div class="leadership-card hover-lift">
+            <p class="leadership-date">Jan 2025</p>
+            <h3>Committee Member — Infinite Insights: Webinar Series on Real Analysis, UiTM Seremban</h3>
+            <p>Supported the planning and delivery of a mathematics lecture webinar series at UiTM Seremban.</p>
+          </div>
+          <div class="leadership-card hover-lift">
+            <p class="leadership-date">Dec 2024 – Jan 2025</p>
+            <h3>Registration &amp; Feedback Committee — Forum Cakna, UiTM Seremban</h3>
+            <p>Managed participant registration and feedback collection for Forum Cakna: Pencegahan Jenayah, Sejarah PDRM &amp; Penipuan Siber, a crime prevention and cyber-scam awareness forum.</p>
+          </div>
+          <div class="leadership-card hover-lift">
+            <p class="leadership-date">May – Jun 2023</p>
+            <h3>Facilitator — Program Klinik Matematik, UiTM Seremban (Demaths)</h3>
+            <p>Tutored students one-on-one to address academic needs and collaborated with the Degree Mathematics Society to refine curriculum content.</p>
+          </div>
+        </div>
+        <!-- Need more leadership entries? Duplicate one <div class="leadership-card hover-lift">...</div> block above. -->
+        <!-- TO ADD PHOTOS to a card: paste this just before the card's closing </div> (update both filenames):
+             <div class="photo-strip">
+               <button class="img-trigger" data-img="event1.jpg" type="button"><img src="event1.jpg" alt="Photo 1"></button>
+             </div> -->
+      </div>
+    </section>
+    <!-- REFERENCES -->
+    <section class="block panel" id="references">
+      <div class="block-inner reveal">
+        <p class="block-eyebrow">09 — References</p>
+        <h2 class="block-title">References</h2>
+        <div class="ref-grid">
+          <div class="ref-card hover-lift">
+            <p class="ref-name">References available upon request</p>
+            <p class="ref-title">Contact me by email and I'll gladly share referee details.</p>
+            <p class="ref-contact">mmkz1999@gmail.com · (+60)12-2576460</p>
+          </div>
+        </div>
+        <!-- TO LIST REAL REFEREES later, replace the card above with one card per referee: -->
+        <!-- <div class="ref-card hover-lift">
+          <p class="ref-name">[Referee Full Name]</p>
+          <p class="ref-title">[Referee Title/Position, Organisation]</p>
+          <p class="ref-contact">email@example.com · (+60)1X-XXXXXXX</p>
+        </div> -->
+      </div>
+    </section>
+    <footer class="site-footer">
+      <p>© 2026 Muhammad Mukhlis Bin Kamarul Zaman · Built with HTML, CSS &amp; JS · Hosted on GitHub Pages</p>
+      <!-- [RM35 ONLY] Link to this site's public GoatCounter dashboard. -->
+      <!-- Works once the "mukhliskamarul" site is created in GoatCounter with the -->
+      <!-- Public dashboard setting enabled. -->
+      <p class="footer-stats-link"><a href="https://mukhliskamarul.goatcounter.com" target="_blank">View site stats</a></p>
+    </footer>
+    <!-- SHARED IMAGE OVERLAY -->
+    <!-- One overlay reused by every photo on the page (certifications, work -->
+    <!-- experience, achievements, leadership). JS sets the image src to whatever -->
+    <!-- was clicked. Same JS-controlled pattern as the project detail overlay — -->
+    <!-- deliberately not using the URL hash, so it never collides with tab navigation. -->
+    <div class="image-overlay" id="imageOverlay">
+      <button class="detail-close" id="imageOverlayClose" aria-label="Close" type="button">✕</button>
+      <img src="" alt="" id="imageOverlayImg" />
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
